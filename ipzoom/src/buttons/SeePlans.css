@@ -1,0 +1,16 @@
+.seePlan{
+    border-radius: 25px;
+    border: 0px;
+    background-color: transparent;
+    padding: 10px 30px;
+    font-weight: bolder;
+    margin-bottom: 100px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid rgb(8, 254, 209);
+}
+.seePlan:hover{
+    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+    color: black;
+    border: 1px solid transparent;
+}

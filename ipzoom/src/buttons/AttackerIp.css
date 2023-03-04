@@ -1,0 +1,19 @@
+.AttackerIp{
+    font-family: "Montserrat", sans-serif;
+    display: inline;
+    margin-right: 10px;
+}
+.AttackerIpButton{
+    font-size: 17px;
+    background-color: transparent;
+    border: 2px solid #94ff49;
+    border-radius: 25px;
+    font-weight: bold;
+    color: black;
+    padding: 7px 20px;
+}
+.AttackerIpButton:hover{
+    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+    color: black;
+    border: 2px solid transparent;
+}

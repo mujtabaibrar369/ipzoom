@@ -1,0 +1,73 @@
+.footer-navbar{
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
+    height: 270px;
+    line-height: 1.6rem;
+}
+.footer-container{
+    max-width: 1250px;
+    margin: auto;
+}
+.footer-logo-div{
+    width: 21%;
+    margin-right: 50px;
+    float: left;
+    margin-top: 50px;
+}
+.footer-logo{
+    width: 60%;
+}
+.footer-product-div{
+    width: 17%;
+    float: left;
+    color: white;
+    margin-top: 60px;
+}
+.product-text{
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.product-list{
+    list-style: none;
+    color: white;
+    padding: 0px;
+}
+.product-li{
+    margin-bottom: 8px;
+}
+.li-link{
+    color: white;
+}
+.li-link:hover{
+    color: rgb(102, 250, 10);
+}
+.footer-support-div{
+    width: 20%;
+    float: left;
+    color: white;
+    margin-top: 60px;
+}
+.subscription-div{
+    width: 35%;
+    float: right;
+    margin-top: 60px;
+}
+.email-div{
+    width: 75%;
+    border: 1px solid rgb(102, 250, 10);
+    background-color: transparent;
+    padding: 10px;
+    padding-left: 25px;
+    border-radius: 25px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    float: right;
+    margin-right: 110px;
+}
+.email-div::placeholder {
+    color: white;
+}
+.email-div {
+    color: white;
+}
+  
