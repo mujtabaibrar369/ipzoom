@@ -11,6 +11,9 @@
   font-weight: 500;
   cursor: pointer;
 }
-.pricingButton:hover{
+.pricing-link {
+  color: white;
+}
+.pricing-link:hover{
   color: rgb(102, 250, 10);
 }

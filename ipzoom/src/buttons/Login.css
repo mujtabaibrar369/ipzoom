@@ -11,14 +11,11 @@
   cursor: pointer;
   border: 1px solid rgb(8, 254, 209);
   border-radius: 20px;
-}
-.login-link {
   color: white;
 }
 .loginButton:hover{
-  /* color: rgb(102, 250, 10); */
-    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
-    color: black;
-    border: 1px solid transparent;
-    font-weight: bold;
+  background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+  color: black;
+  border: 1px solid transparent;
+  font-weight: bold;
 }

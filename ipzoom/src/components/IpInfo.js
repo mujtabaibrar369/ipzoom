@@ -8,7 +8,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 const IpInfo = () => {
   const [ip, setIp] = useState("");
-
   const [city, setCity] = useState("");
   const [continentCode, setContinentCode] = useState("");
   const [continentName, setContinentName] = useState("");
@@ -77,19 +76,21 @@ const IpInfo = () => {
         </a>
       </div>
       <div className="information">
-        <p>ip_address: "{ip}"</p>
-        <p>city: "{city}"</p>
-        <p>continent_code: "{continentCode}"</p>
-        <p>continent_name: "{continentName}"</p>
-        <p>country_name: "{countryName}"</p>
-        <p>country_capital: "{countryCapital}"</p>
-        <p>country_code2: "{countryCode}"</p>
-        <p>currency: "{currency}"</p>
-        <p>languages: "{languages}"</p>
-        <p>latitude: "{latitude}"</p>
-        <p>longitude: "{longitude}"</p>
-        <p>organization: "{organization}"</p>
-        <p>timezone: "{timeZone}"</p>
+        <p className="curly-brace">{'{'}</p>
+        <p className="info">ip_address: "{ip}",<br></br>
+        city: "{city}",<br></br>
+        continent_code: "{continentCode}",<br></br>
+        continent_name: "{continentName}",<br></br>
+        country_name: "{countryName}",<br></br>
+        country_capital: "{countryCapital}",<br></br>
+        country_code: "{countryCode}",<br></br>
+        currency: "{currency}",<br></br>
+        languages: "{languages}",<br></br>
+        latitude: "{latitude}",<br></br>
+        longitude: "{longitude}",<br></br>
+        organization: "{organization}",<br></br>
+        timezone: "{timeZone}"</p>
+        <p className="curly-brace">{'}'}</p>
       </div>
       <div className="search_ip_buttons">
         <YourIpAddress></YourIpAddress>

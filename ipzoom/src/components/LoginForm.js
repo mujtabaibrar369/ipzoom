@@ -1,99 +1,43 @@
-import React from "react";
 import "./LoginForm.css";
-import bgVideo from "./video.mp4";
-import Header from "./Header";
-import {
-  MDBContainer,
-  MDBInput,
-  MDBCheckbox,
-  MDBBtn,
-  MDBIcon,
-} from "mdb-react-ui-kit";
-
-function LoginForm() {
+import Logo from "./logo.png";
+import { Link } from "react-router-dom";
+import LoginSubmit from "../buttons/LoginSubmit";
+const LoginForm = () => {
   return (
-    <div>
-      <Header className="login-header"></Header>
-      <MDBContainer
-        className="p-3 my-5 d-flex flex-column w-50"
-        style={{ maxWidth: "350px" }}
-      >
-        <h2>Sign in</h2>
-        <MDBInput
-          wrapperClass="mb-4"
-          label="Email address"
-          id="form1"
+    <div className="loginform-div">
+      <div>
+        <Link to="/">
+          <img className="login-logo" src={Logo} alt="" />
+        </Link>
+      </div>
+      <div className="loginform-main-div">
+        <p className="sign-in-heading">Login</p>
+        <p className="sign-in-hint">Login with Ip Zoom Account</p>
+        <input
           type="email"
+          placeholder="Enter Email Address"  
+          className="enter-email-login"
+          required
         />
-        <MDBInput
-          wrapperClass="mb-4"
-          label="Password"
-          id="form2"
+        <input
           type="password"
+          placeholder="Enter Password"  
+          className="enter-password-login"
+          required
         />
-
-        <div className="d-flex justify-content-between mx-3 mb-4">
-          <MDBCheckbox
-            name="flexCheck"
-            value=""
-            id="flexCheckDefault"
-            label="Remember me"
-          />
-          <a href="!#">Forgot password?</a>
+        <LoginSubmit></LoginSubmit>
+        <div className="forgot-div">
+          <Link to="/reset">
+            <a className="forgot-link">Forgot Password</a>
+          </Link>
         </div>
-
-        <MDBBtn className="mb-4">Sign in</MDBBtn>
-
-        <div className="text-center">
-          <p>
-            Not a member? <a href="./signup">Sign Up</a>
-          </p>
-          <p>or sign in with:</p>
-
-          <div
-            className="d-flex justify-content-between mx-auto"
-            style={{ width: "40%" }}
-          >
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}
-            >
-              <MDBIcon fab icon="facebook-f" size="sm" />
-            </MDBBtn>
-
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}
-            >
-              <MDBIcon fab icon="twitter" size="sm" />
-            </MDBBtn>
-
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}
-            >
-              <MDBIcon fab icon="google" size="sm" />
-            </MDBBtn>
-
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}
-            >
-              <MDBIcon fab icon="github" size="sm" />
-            </MDBBtn>
-          </div>
-        </div>
-      </MDBContainer>
+      </div>
+      <div>
+        <p className="dont-text">Don’t have an account? 
+          <Link to="/signup"><span><a className="dont-link" href="#"> Sign Up</a></span></Link>
+        </p>
+      </div>
     </div>
   );
-}
-
+};
 export default LoginForm;

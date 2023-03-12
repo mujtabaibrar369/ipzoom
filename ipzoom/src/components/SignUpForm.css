@@ -1,0 +1,68 @@
+.signupform-div{
+    background-color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 40px;
+  }
+  .signup-logo{
+    width: 200px;
+    margin: 70px auto 30px auto;
+  }
+  .signupform-main-div{
+    background-color: white;
+    height: 550px;
+    width: 500px;
+    margin: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 35px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .sign-up-heading{
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .enter-credentials{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 15px;
+    margin-bottom: 13px;
+  }
+  .confirm-password{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+  }
+  .terms-privacy-div{
+    text-align: center;
+    width: 385px;
+    margin: auto;
+  }
+  .terms-link{
+    font-size: 14px;
+    margin-top: 40px;
+    color: blue;
+  }
+  .privacy-link{
+    font-size: 14px;
+    margin-top: 40px;
+    color: blue;
+  }
+  .dont-text{
+    color: white;
+    font-size: 14px;
+  }
+  .dont-link{
+    font-weight: bold;
+    color: white;
+  }
+  .dont-link:hover{
+    color: rgb(102, 250, 10);
+  }
