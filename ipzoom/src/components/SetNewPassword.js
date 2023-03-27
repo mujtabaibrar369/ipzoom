@@ -2,7 +2,25 @@ import "./SetNewPassword.css";
 import Logo from "./logo.png";
 import { Link } from "react-router-dom";
 import SetPassword from "../buttons/SetPassword";
+import { useState } from "react";
+import axios from "axios";
 const SetNewPassword = () => {
+  const [pass, SetPass] = useState();
+  const handleChange = (e) => {
+    SetPass({ ...pass, [e.target.name]: e.target.value });
+  };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    if (password === confirmPassword) {
+      const response = await axios.put(
+        "http://localhost:5000/api/users/resetPassword/:resetToken",
+        password
+      );
+      console.log(response.data);
+    }
+  };
   return (
     <div className="set-new-password-div">
       <div>
@@ -12,21 +30,27 @@ const SetNewPassword = () => {
       </div>
       <div className="set-new-password-main">
         <p className="set-heading">Set New Password</p>
-        <div>
+        <form onSubmit={submitHandler}>
+          <div>
             <input
-            type="password"
-            placeholder="Enter Password"  
-            className="set-password"
-            required
+              type="password"
+              placeholder="Enter Password"
+              className="set-password"
+              id="password"
+              name="password"
+              onChange={handleChange}
+              required
             />
             <input
-            type="password"
-            placeholder="Confirm Password"  
-            className="set-confirm-password"
-            required
+              type="password"
+              placeholder="Confirm Password"
+              className="set-confirm-password"
+              id="confirmPassword"
+              required
             />
-        </div>
-            <SetPassword></SetPassword>
+          </div>
+          <SetPassword></SetPassword>
+        </form>
       </div>
     </div>
   );

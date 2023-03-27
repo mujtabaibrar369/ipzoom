@@ -21,7 +21,10 @@ function App() {
           <Route path="/signup" element={<SignUpForm />}></Route>
           <Route path="/reset" element={<ResetForm />}></Route>
           <Route path="/pricing" element={<PricingPlans />}></Route>
-          <Route path="/setnewpassword" element={<SetNewPassword />}></Route>
+          <Route
+            path="/resetPassword/:resetToken"
+            element={<SetNewPassword />}
+          ></Route>
           <Route path="*" element={ErrorPage} />
           <Route path="/logout" element={<Home />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
