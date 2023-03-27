@@ -1,0 +1,18 @@
+.free-signup-div{
+    margin-bottom: 0px;
+}
+.free-signup-button{
+    background-color: black;
+    color: white;
+    width: 50%;
+    padding: 9px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.free-signup-button:hover{
+    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+    color: black;
+    border: 2px solid transparent;
+    font-weight: bold;
+}

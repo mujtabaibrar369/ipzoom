@@ -1,0 +1,64 @@
+.loginform-div{
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 70px;
+}
+.login-logo{
+  width: 200px;
+  margin: 100px auto 30px auto;
+}
+.loginform-main-div{
+  background-color: white;
+  height: 400px;
+  width: 500px;
+  margin: auto;
+  color: black;
+  border-radius: 10px;
+  padding: 35px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.sign-in-heading{
+  font-size: 23px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.sign-in-hint{
+  opacity: 0.9;
+}
+.enter-email-login{
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  padding: 9px 15px;
+  margin-bottom: 13px;
+}
+.enter-password-login{
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  padding: 9px 15px;
+  margin-bottom: 20px;
+}
+.forgot-link{
+  font-size: 14px;
+  margin-top: 40px;
+  color: #162EAE;
+}
+.forgot-div{
+  text-align: center;
+}
+.dont-text{
+  color: white;
+  font-size: 14px;
+}
+.dont-link{
+  font-weight: bold;
+  color: white;
+}
+.dont-link:hover{
+  color: rgb(102, 250, 10);
+}

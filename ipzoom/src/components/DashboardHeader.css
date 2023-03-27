@@ -1,0 +1,17 @@
+.dashboard-navbar{
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    padding: 20px 0px;
+  }
+  .dashboard-header{
+    width: 50%;
+  }
+  .dashboard-navbar-buttons{
+    width: 50%;
+  }
+  .dashboard-logo{
+    width: 35%;
+    margin-top: 10px;
+  }

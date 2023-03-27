@@ -1,0 +1,25 @@
+.logoutDiv {
+  display: inline;
+  line-height: 1.6rem;
+}
+.logoutButton {
+  background-color: transparent;
+  margin: 0px 0px 0px 0px;
+  padding: 3px 25px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: 1px solid rgb(8, 254, 209);
+  border-radius: 20px;
+  color: white;
+}
+.logoutButton:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(102, 250, 10),
+    rgb(8, 254, 209)
+  );
+  color: black;
+  border: 1px solid transparent;
+  font-weight: bold;
+}

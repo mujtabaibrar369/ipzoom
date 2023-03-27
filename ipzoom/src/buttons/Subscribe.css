@@ -1,0 +1,21 @@
+.subscribe-btn{
+    border-radius: 25px;
+    border: 0px;
+    background-color: transparent;
+    padding: 7px 15px;
+    font-weight: 100;
+    margin-bottom: 100px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid rgb(8, 254, 209);
+    font-size: 13px;
+    float: right;
+    margin-right: 110px;
+    font-weight: bold;
+}
+.subscribe-btn:hover{
+    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+    color: black;
+    border: 1px solid transparent;
+    font-weight: bold;
+}

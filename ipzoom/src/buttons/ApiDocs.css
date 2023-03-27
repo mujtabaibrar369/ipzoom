@@ -1,0 +1,16 @@
+.apidocs-Div {
+    display: inline;
+  }
+  .apidocs-Button {
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    margin: 20px 90px 0px 0px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .apidocs-Button:hover{
+    color: rgb(102, 250, 10);
+  }

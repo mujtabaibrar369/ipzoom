@@ -1,0 +1,64 @@
+.ip_info {
+  height: 820px;
+  background-color: white;
+  border-radius: 30px;
+  width: 900px;
+  position: absolute;
+  top: 350px;
+  left: 20.5%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 1.6rem;
+}
+.search_icon_div{
+  position: absolute;
+  top: 43.4px;
+  right: 184px;
+  width: 100px;
+  background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+  border-radius: 40px;
+  padding: 10px 30px 10px 30px;
+}
+.search-div{
+  margin: auto;
+  width: 60%;
+  border: 2px solid #94ff49;
+  background-color: transparent;
+  padding: 5px;
+  padding-left: 25px;
+  border-radius: 30px;
+  font-size: 27px;
+  margin-top: 40px;
+  line-height: 3rem;
+  
+}
+.search-div::placeholder {
+  color: black;
+  letter-spacing: 2.5px;
+  /* font-weight: bold; */
+}
+.information {
+  background-color: #031112;
+  height: 550px;
+  border-radius: 20px;
+  width: 600px;
+  margin: auto;
+  margin-top: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  padding: 60px 80px;
+}
+.curly-brace{
+  margin-bottom: 0rem;
+}
+.info{
+  margin-left: 20px;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0rem;
+}
+.search_ip_buttons{
+  margin-top: 40px;
+}

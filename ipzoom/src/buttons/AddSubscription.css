@@ -1,0 +1,19 @@
+.add-subscription-div{
+    margin-bottom: unset;
+}
+.add-subscription-button{
+    background-color: black;
+    color: white;
+    width: 90%;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+.add-subscription-button:hover{
+    background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
+    color: black;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
