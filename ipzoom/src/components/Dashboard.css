@@ -1,10 +1,35 @@
 .dashboard-main-div{
     background-color: black;
 }
-.dashboard-main{
+.dashboard-personal{
     max-width: 1100px;
     margin: auto;
     margin-top: 55px;
+    border: 1px solid #D1D1D1;
+    font-family: "Montserrat", sans-serif;
+}
+.personal-heading{
+    background-color: #d1d1d1;
+    padding: 7px 15px;
+    margin-bottom: 20px;
+    color: black;
+}
+.personal-text{
+    margin-bottom: unset;
+    font-weight: bold;
+    color: black;
+}
+.personal-info{
+    margin-left: 15px;
+    font-weight: bold;
+}
+.personal-value{
+    font-weight: 500;
+}
+.dashboard-main{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 35px;
     border: 1px solid #D1D1D1;
     font-family: "Montserrat", sans-serif;
 }

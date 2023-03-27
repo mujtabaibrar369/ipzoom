@@ -1,32 +1,15 @@
-/* .header {
-  width: 40%;
-  height: 70px;
-  object-fit: cover;
-  float: left;
-  padding-top: 5px; 
-}
-.logo {
-   padding-left: 50px;
-  cursor: pointer;
-  width: 278px; 
-}  */
 .navbar{
   max-width: 1300px;
   margin: auto;
   overflow: hidden;
-  /* margin-top: 40px; */
-  /* padding: 75px; */
-  /* background-color: rgb(0, 0, 0, 0.8); */
 }
 .header{
-  width: 35%;
-  /* margin-top: 35px 0px; */
+  width: 33%;
 }
 .navbar-buttons{
-  width: 65%;
+  width: 67%;
 }
 .logo{
-  width: 40%;
+  width: 45%;
   margin-top: 10px;
-  /* margin-left: 80px; */
 }

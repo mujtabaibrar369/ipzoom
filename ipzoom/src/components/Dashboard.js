@@ -40,6 +40,16 @@ const Dashboard = () => {
         <div className="dashboard-main-div">
           <DashboardHeader />
         </div>
+        <div className="dashboard-personal">
+          <div className="personal-heading">
+            <p className="personal-text">Personal Information</p>
+          </div>
+          <p className="personal-info">First Name: <span className="personal-value">Muhammad</span></p>
+          <p className="personal-info">Last Name: <span className="personal-value">Hashim</span></p>
+          <p className="personal-info">Email Address: <span className="personal-value">muhammadhashim@gmail.com</span></p>
+          <p className="personal-info">Subscription Id: <span className="personal-value">124jk431</span></p>
+          <p className="personal-info">Subscription Status: <span className="personal-value">Active</span></p>
+        </div>
         <div className="dashboard-main">
           <div className="api-keys-heading">
             <p className="api-keys-text">API Keys</p>
