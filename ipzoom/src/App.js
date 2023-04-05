@@ -10,6 +10,7 @@ import SetNewPassword from "./components/SetNewPassword";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./components/Dashboard";
+import Subscribe from "./components/Subscribe";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="*" element={ErrorPage} />
           <Route path="/logout" element={<Home />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/subscribe" element={<Subscribe />}></Route>
         </Routes>
       </Router>
       <ToastContainer />

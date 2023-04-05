@@ -55,7 +55,7 @@
     margin-top: 40px;
     color: blue;
   }
-  .dont-text{
+  .alreadyText{
     color: white;
     font-size: 14px;
   }
@@ -66,3 +66,141 @@
   .dont-link:hover{
     color: rgb(102, 250, 10);
   }
+@media (min-width: 200px) and (max-width: 600px) {
+  .signupform-div{
+    background-color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 20px;
+  }
+  .signup-logo{
+    width: 150px;
+    margin: 30px auto 25px auto;
+  }
+  .signupform-main-div{
+    background-color: white;
+    height: unset;
+    width: 85%;
+    margin: auto;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .sign-up-heading{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .enter-credentials{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 12px;
+    margin-bottom: 12px;
+  }
+  .confirm-password{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 12px;
+    margin-bottom: 15px;
+  }
+  .terms-privacy-div{
+    text-align: center;
+    width: 77%;
+    margin: auto;
+    font-size: 15px;
+  }
+  .terms-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: blue;
+  }
+  .privacy-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: blue;
+  }
+  .alreadyText{
+    color: white;
+    font-size: 13px;
+  }
+  .dont-link{
+    font-weight: bold;
+    color: white;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .signupform-div{
+    background-color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 20px;
+  }
+  .signup-logo{
+    width: 170px;
+    margin: 40px auto 30px auto;
+  }
+  .signupform-main-div{
+    background-color: white;
+    height: unset;
+    width: 480px;
+    margin: auto;
+    color: black;
+    border-radius: 5px;
+    padding: 25px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .sign-up-heading{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+  .enter-credentials{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 13px;
+    margin-bottom: 13px;
+  }
+  .confirm-password{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 13px;
+    margin-bottom: 17px;
+  }
+  .terms-privacy-div{
+    text-align: center;
+    width: 77%;
+    margin: auto;
+    font-size: 15px;
+  }
+  .terms-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: blue;
+  }
+  .privacy-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: blue;
+  }
+  .alreadyText{
+    color: white;
+    font-size: 14px;
+  }
+  .dont-link{
+    font-weight: bold;
+    color: white;
+  }
+}

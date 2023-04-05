@@ -13,3 +13,20 @@
   width: 45%;
   margin-top: 10px;
 }
+@media (min-width: 200px) and (max-width: 600px) {
+  .navbar{
+    max-width: unset;
+    margin: unset;
+    overflow: hidden;
+  }
+  .header{
+    width: 55%;
+  }
+  .navbar-buttons{
+    width: 45%;
+  }
+  .logo{
+    width: 90%;
+    margin-top: 10px;
+  }
+}

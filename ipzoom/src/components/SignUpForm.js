@@ -117,10 +117,12 @@ const SignUpForm = () => {
             <p>
               By signing up, you agree to the
               <span>
+              <Link to="/subscribe">
                 <a className="terms-link" href="localhost:3000">
                   {" "}
                   Terms of Service{" "}
                 </a>
+              </Link>
               </span>{" "}
               and
               <span>
@@ -133,7 +135,7 @@ const SignUpForm = () => {
           </div>
         </div>
         <div>
-          <p className="dont-text">
+          <p className="alreadyText">
             Already have an account?
             <Link to="/login">
               <a className="dont-link" href="localhost:3000">

@@ -71,9 +71,9 @@ const Dashboard = () => {
               <p className="usage-text">Total Usage</p>
               <p className="usage-value">0/100</p>
             </div>
-            <div className="usage-div">
-              <p className="usage-text">Created Date</p>
-              <p className="usage-value">17 Mar 2023</p>
+            <div className="createdDate-div">
+              <p className="createdDate-text">Created Date</p>
+              <p className="date-value">17 Mar 2023</p>
             </div>
             <div className="limits-div">
               <p className="limits-text">Limits</p>

@@ -21,3 +21,5 @@
   color: black;
   font-weight: 500;
 }
+@media (min-width: 200px) and (max-width: 600px) {
+}

@@ -5,6 +5,21 @@
   margin: 80px auto 0px auto;
   width: 650px;
 }
-.slogan-heading {
+.slogan-span {
   font-weight: bold;
+}
+@media (min-width: 200px) and (max-width: 600px) {
+  .slogan_div {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-align: center;
+    margin: 80px auto 0px auto;
+    width: unset;
+  }
+  .slogan-heading{
+    font-size: 17px;
+  }
+  .slogan-span {
+    font-weight: bold;
+  }
 }

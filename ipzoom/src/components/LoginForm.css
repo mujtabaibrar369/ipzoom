@@ -62,3 +62,132 @@
 .dont-link:hover{
   color: rgb(102, 250, 10);
 }
+@media (min-width: 200px) and (max-width: 600px) {
+  .loginform-div{
+    background-color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 20px;
+  }
+  .login-logo{
+    width: 150px;
+    margin: 30px auto 25px auto;
+  }
+  .loginform-main-div{
+    background-color: white;
+    height: unset;
+    width: 85%;
+    margin: auto;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .sign-in-heading{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .sign-in-hint{
+    opacity: 0.9;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .enter-email-login{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 12px;
+    margin-bottom: 12px;
+  }
+  .enter-password-login{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 12px;
+    margin-bottom: 15px;
+  }
+  .forgot-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: #162EAE;
+  }
+  .forgot-div{
+    text-align: center;
+  }
+  .dont-text{
+    color: white;
+    font-size: 13px;
+  }
+  .dont-link{
+    font-weight: bold;
+    color: white;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .loginform-div{
+    background-color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 20px;
+  }
+  .login-logo{
+    width: 170px;
+    margin: 40px auto 30px auto;
+  }
+  .loginform-main-div{
+    background-color: white;
+    height: unset;
+    width: 480px;
+    margin: auto;
+    color: black;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .sign-in-heading{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .sign-in-hint{
+    opacity: 0.9;
+    margin-bottom: 12px;
+  }
+  .enter-email-login{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 13px;
+    margin-bottom: 13px;
+  }
+  .enter-password-login{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 9px 13px;
+    margin-bottom: 17px;
+  }
+  .forgot-link{
+    font-size: 14px;
+    margin-top: unset;
+    color: #162EAE;
+  }
+  .forgot-div{
+    text-align: center;
+  }
+  .dont-text{
+    color: white;
+    font-size: 13px;
+  }
+  .dont-link{
+    font-weight: bold;
+    color: white;
+  }
+}

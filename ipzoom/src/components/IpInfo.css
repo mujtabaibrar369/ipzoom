@@ -62,3 +62,5 @@
 .search_ip_buttons{
   margin-top: 40px;
 }
+@media (min-width: 200px) and (max-width: 600px) {
+}

@@ -89,6 +89,18 @@
 .usage-value{
     margin-bottom: unset;
 }
+.createdDate-div{
+    width: 15%;
+    color: black;
+    text-align: center;
+}
+.createdDate-text{
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.date-value{
+    margin-bottom: unset;
+}
 .limits-div{
     width: 10%;
     color: black;
@@ -109,4 +121,417 @@
 }
 .subscription-value{
     margin-bottom: 20px;
+}
+@media (min-width: 200px) and (max-width: 600px) {
+    .dashboard-main-div{
+        background-color: black;
+    }
+    .dashboard-personal{
+        max-width: 90%;
+        margin: auto;
+        margin-top: 35px;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .personal-heading{
+        background-color: #d1d1d1;
+        padding: 5px 12px;
+        margin-bottom: 12px;
+        color: black;
+    }
+    .personal-text{
+        margin-bottom: unset;
+        font-weight: bold;
+        color: black;
+    }
+    .personal-info{
+        margin: 0px 12px 12px 12px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .personal-value{
+        font-weight: 500;
+    }
+    .dashboard-main{
+        max-width: 90%;
+        margin: 25px auto;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .api-keys-heading{
+        background-color: #d1d1d1;
+        padding: 5px 12px;
+        margin-bottom: 12px;
+        color: black;
+    }
+    .api-keys-text{
+        margin-bottom: unset;
+        font-weight: bold;
+    }
+    .type-key-div{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .type-div{
+        width: 90%;
+        color: black;
+        padding-left: unset;
+        font-weight: bold;
+        margin: 0px 12px;
+    }
+    .type-text{
+        margin-bottom: 7px;
+    }
+    .developer-text{
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    .key-div{
+        width: 90%;
+        color: black;
+        margin: 0px 12px;
+    }
+    .key-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .key-back{
+        background-color: #D1D1D1;
+        padding: 3px;
+        width: 100%;
+        border: 1px solid #9B9B9B;
+        border-radius: 3px;
+        margin-bottom: 12px;
+    }
+    .key-value{
+        margin-bottom: 0px;
+    }
+    .usage-div{
+        width: 90%;
+        color: black;
+        text-align: left;
+        margin: 0px 12px;
+    }
+    .usage-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .usage-value{
+        margin-bottom: 10px;
+    }
+    .createdDate-div{
+        width: 90%;
+        color: black;
+        text-align: left;
+        margin: 0px 12px;
+    }
+    .createdDate-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .date-value{
+        margin-bottom: 10px;
+    }
+    .limits-div{
+        width: 90%;
+        color: black;
+        text-align: left;
+        margin: 0px 12px;
+    }
+    .limits-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .current-subscription-div{
+        width: 90%;
+        color: black;
+        text-align: left;
+        margin: 0px 12px;
+    }
+    .current-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .subscription-value{
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+    .dashboard-main-div{
+        background-color: black;
+    }
+    .dashboard-personal{
+        max-width: 90%;
+        margin: auto;
+        margin-top: 35px;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .personal-heading{
+        background-color: #d1d1d1;
+        padding: 6px 13px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    .personal-text{
+        margin-bottom: unset;
+        font-weight: bold;
+        color: black;
+    }
+    .personal-info{
+        margin: 0px 13px 13px 13px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .personal-value{
+        font-weight: 500;
+    }
+    .dashboard-main{
+        max-width: 90%;
+        margin: 25px auto;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .api-keys-heading{
+        background-color: #d1d1d1;
+        padding: 6px 13px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    .api-keys-text{
+        margin-bottom: unset;
+        font-weight: bold;
+    }
+    .type-key-div{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .type-div{
+        width: 25%;
+        color: black;
+        font-weight: bold;
+        padding: 0px 0px 0px 25px;
+        float: left;
+    }
+    .type-text{
+        margin-bottom: 7px;
+    }
+    .developer-text{
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    .key-div{
+        width: 75%;
+        color: black;
+        padding-left: 25px;
+        float: left;
+    }
+    .key-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .key-back{
+        background-color: #D1D1D1;
+        padding: 3px;
+        width: 350px;
+        border: 1px solid #9B9B9B;
+        border-radius: 3px;
+        margin-bottom: 12px;
+    }
+    .key-value{
+        margin-bottom: 0px;
+    }
+    .usage-div{
+        width: 25%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .usage-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .usage-value{
+        margin-bottom: 10px;
+    }
+    .createdDate-div{
+        width: 75%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .createdDate-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .date-value{
+        margin-bottom: 10px;
+    }
+    .limits-div{
+        width: 25%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .limits-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .current-subscription-div{
+        width: 75%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .current-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .subscription-value{
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .dashboard-main-div{
+        background-color: black;
+    }
+    .dashboard-personal{
+        max-width: 90%;
+        margin: auto;
+        margin-top: 35px;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .personal-heading{
+        background-color: #d1d1d1;
+        padding: 7px 13px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    .personal-text{
+        margin-bottom: unset;
+        font-weight: bold;
+        color: black;
+    }
+    .personal-info{
+        margin: 0px 13px 13px 13px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .personal-value{
+        font-weight: 500;
+    }
+    .dashboard-main{
+        max-width: 90%;
+        margin: 25px auto;
+        border: 1px solid #D1D1D1;
+        font-family: "Montserrat", sans-serif;
+    }
+    .api-keys-heading{
+        background-color: #d1d1d1;
+        padding: 7px 13px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    .api-keys-text{
+        margin-bottom: unset;
+        font-weight: bold;
+    }
+    .type-key-div{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .type-div{
+        width: 25%;
+        color: black;
+        font-weight: bold;
+        padding: 0px 0px 0px 25px;
+        float: left;
+    }
+    .type-text{
+        margin-bottom: 7px;
+    }
+    .developer-text{
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    .key-div{
+        width: 50%;
+        color: black;
+        padding-left: 25px;
+        float: left;
+    }
+    .key-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .key-back{
+        background-color: #D1D1D1;
+        padding: 3px;
+        width: 350px;
+        border: 1px solid #9B9B9B;
+        border-radius: 3px;
+        margin-bottom: 12px;
+    }
+    .key-value{
+        margin-bottom: 0px;
+    }
+    .usage-div{
+        width: 25%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+        margin-bottom: 10px;
+    }
+    .usage-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .usage-value{
+        margin-bottom: 10px;
+    }
+    .createdDate-div{
+        width: 25%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .createdDate-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .date-value{
+        margin-bottom: 10px;
+    }
+    .limits-div{
+        width: 50%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .limits-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .current-subscription-div{
+        width: 25%;
+        color: black;
+        text-align: left;
+        padding-left: 25px;
+        float: left;
+    }
+    .current-text{
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+    .subscription-value{
+        margin-bottom: 10px;
+    }
 }
