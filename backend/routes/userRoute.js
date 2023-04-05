@@ -11,6 +11,7 @@ const {
   checkUserIp,
   subscription,
   searchUserIp,
+  forgotPassword,
 } = require("../controller/userController");
 const router = express.Router();
 router.post("/register", registerUser);
@@ -19,7 +20,8 @@ router.get("/logout", logoutUser);
 router.get("/getUser", userProfile);
 router.get("/isLogedIn", isLogedIn);
 router.patch("/changePassword", changePassword);
-router.post("/resetPassword", resetPassword);
+router.post("/forgotPassword", forgotPassword);
+router.put("/resetPassword/:resetToken", resetPassword);
 router.get("/checkUserIp", checkUserIp);
 router.get("/searchUserIp/:ip", searchUserIp);
 router.get("/checkVpn", checkVpn);

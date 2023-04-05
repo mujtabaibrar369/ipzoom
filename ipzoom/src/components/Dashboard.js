@@ -7,7 +7,10 @@ import axios from "axios";
 import PayPalProButton from "../buttons/PayPalProButton";
 const Dashboard = () => {
   const [status, setStatus] = useState();
-  let user;
+  const [userFirstName, setUserFirstName] = useState("");
+  const [userLastName, setUserLastName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+
   const token = localStorage.getItem("AccessToken");
   useEffect(() => {
     if (token) {
@@ -21,9 +24,9 @@ const Dashboard = () => {
               },
             }
           );
-          console.log(response.data.firstName);
-          user = response.data;
-          console.log(user);
+          setUserFirstName(response.data.firstName);
+          setUserLastName(response.data.lastName);
+          setUserEmail(response.data.email);
         } catch (error) {
           console.log("Error fetching user", error);
         }
@@ -44,11 +47,21 @@ const Dashboard = () => {
           <div className="personal-heading">
             <p className="personal-text">Personal Information</p>
           </div>
-          <p className="personal-info">First Name: <span className="personal-value">Muhammad</span></p>
-          <p className="personal-info">Last Name: <span className="personal-value">Hashim</span></p>
-          <p className="personal-info">Email Address: <span className="personal-value">muhammadhashim@gmail.com</span></p>
-          <p className="personal-info">Subscription Id: <span className="personal-value">124jk431</span></p>
-          <p className="personal-info">Subscription Status: <span className="personal-value">Active</span></p>
+          <p className="personal-info">
+            First Name: <span className="personal-value">{userFirstName}</span>
+          </p>
+          <p className="personal-info">
+            Last Name: <span className="personal-value">{userLastName}</span>
+          </p>
+          <p className="personal-info">
+            Email Address: <span className="personal-value">{userEmail}</span>
+          </p>
+          <p className="personal-info">
+            Subscription Id: <span className="personal-value">124jk431</span>
+          </p>
+          <p className="personal-info">
+            Subscription Status: <span className="personal-value">Active</span>
+          </p>
         </div>
         <div className="dashboard-main">
           <div className="api-keys-heading">

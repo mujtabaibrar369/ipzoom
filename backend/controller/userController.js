@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const axios = require("axios");
 const API_KEY = "a2a27d746a9f48dca3086f00fdfd6435";
 const isIPProxy = require("is-ip-proxy");
+const sendEmail = require("../utils/mailSender");
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 };
@@ -134,16 +135,19 @@ const changePassword = async (req, res) => {
   }
 };
 
-const resetPassword = async (req, res) => {
+const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
+
     const user = await User.findOne({ email });
+    //Delete token if it exists against that user id
     if (user) {
       let token = await Token.findOne({ userId: user._id });
       if (token) {
         await token.deleteOne();
       }
       const resetToken = crypto.randomBytes(32).toString("hex") + user._id;
+      console.log(resetToken);
       const hashedToken = crypto
         .createHash("sha256")
         .update(resetToken)
@@ -175,15 +179,38 @@ const resetPassword = async (req, res) => {
     res.json({ err: error.message });
   }
 };
+const resetPassword = async (req, res) => {
+  const { password } = req.body;
+  const { resetToken } = req.params;
 
+  console.log(resetToken);
+  const hashedToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
+  const userToken = await Token.findOne({
+    token: hashedToken,
+    expiresAt: { $gt: Date.now() },
+  });
+  if (!userToken) {
+    res.status(404).send("Invalid or expired token");
+  }
+  const user = await User.findOne({ _id: userToken.userId });
+  if (user) {
+    user.password = password;
+    await user.save();
+    res.status(200).json("Password reset successfully");
+  }
+};
 // http://172.16.221.91:6117/geo_IP?ip=175.216.39.11
 const searchUserIp = async (req, res) => {
   try {
     const ipAddress = req.params.ip;
+    console.log(ipAddress);
     // const IpInfo = await axios.get(
     //   `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ipAddress.data.ip}`
     // );
-    console.log(ipAddress);
+
     const ipinfo = await axios.get(
       `http://172.16.221.91:6117/geo_IP?ip=${ipAddress}`
     );
@@ -266,4 +293,5 @@ module.exports = {
   checkVpn,
   subscription,
   searchUserIp,
+  forgotPassword,
 };
