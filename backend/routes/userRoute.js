@@ -9,9 +9,10 @@ const {
   resetPassword,
   checkVpn,
   checkUserIp,
-  subscription,
   searchUserIp,
   forgotPassword,
+  getSubscription,
+  createSubscription,
 } = require("../controller/userController");
 const router = express.Router();
 router.post("/register", registerUser);
@@ -24,7 +25,7 @@ router.post("/forgotPassword", forgotPassword);
 router.put("/resetPassword/:resetToken", resetPassword);
 router.get("/checkUserIp", checkUserIp);
 router.get("/searchUserIp/:ip", searchUserIp);
-router.get("/checkVpn", checkVpn);
-router.get("/subscription", subscription);
-
+router.get("/checkVpn/:ip", checkVpn);
+router.post("/createSubscription", createSubscription);
+router.get("/getSubscription", getSubscription);
 module.exports = router;

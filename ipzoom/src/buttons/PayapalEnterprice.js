@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 
-const PayPalProButton = () => {
+const PayapalEnterprise = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = `https://www.paypal.com/sdk/js?client-id=Ae4QL8MSUamULntRT53PwEqZDs61m4t7n8pcBwbbDAJi6T0eRSjurFrngqyVr-pMSOPB1enID5jltbtc&vault=true&intent=subscription`;
@@ -21,20 +21,11 @@ const PayPalProButton = () => {
           createSubscription: function (data, actions) {
             return actions.subscription.create({
               /* Creates the subscription */
-              plan_id: "P-7CD25924B04716625MQJU2FA",
+              plan_id: "P-16U6598210255521XMQKXDQI",
             });
           },
           onApprove: async function (data, actions) {
-            const token = localStorage.getItem("AccessToken");
-            await axios.post(
-              "http://localhost:5000/api/users/createSubscription",
-              { subscriptionID: data.subscriptionID },
-              {
-                headers: {
-                  authorization: token,
-                },
-              }
-            );
+            alert(data.subscriptionID);
           },
         })
         .render("#paypal-button-container-P-7CD25924B04716625MQJU2FA"); // Renders the PayPal button
@@ -48,4 +39,4 @@ const PayPalProButton = () => {
   );
 };
 
-export default PayPalProButton;
+export default PayapalEnterprise;

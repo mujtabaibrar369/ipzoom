@@ -25,21 +25,6 @@ const userSchema = mongoose.Schema(
       required: [true, "Please enter Password"],
       minLength: [6, "Password too short"],
     },
-    subscription: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-    type: {
-      type: String,
-      enum: ["free", "professional", "enterprise"],
-      default: "free",
-    },
-    subscriptionId: {
-      type: String,
-      required: true,
-      default: "null",
-    },
   },
   {
     timestamps: true,
