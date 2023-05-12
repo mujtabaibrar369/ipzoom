@@ -2,6 +2,7 @@ import "./PricingPlans.css";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import FreeSignUp from "../buttons/FreeSignUp";
+import Footer from "./Footer";
 const PricingPlans = () => {
   return (
     <div className="pricing-div">
@@ -34,6 +35,7 @@ const PricingPlans = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

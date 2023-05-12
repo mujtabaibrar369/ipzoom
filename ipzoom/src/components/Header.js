@@ -27,7 +27,7 @@ const Header = (props) => {
 
   if (status) {
     return (
-      <div className="navbar">
+      <div className="navbarDiv">
         <div className="header">
           <Link to="/">
             <img className="logo" src={Logo} alt="" />
@@ -46,10 +46,10 @@ const Header = (props) => {
     );
   } else {
     return (
-      <div className="navbar">
+      <div className="navbarDiv">
         <div className="header">
           <Link to="/">
-            <img className="logo" src={Logo} alt="" />
+            <img className="logo" src={Logo} alt="Main-Logo" title="Go to Home" />
           </Link>
         </div>
         <div className="navbar-buttons">

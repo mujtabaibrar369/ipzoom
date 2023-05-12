@@ -8,7 +8,7 @@
   font-family: "Montserrat", sans-serif;
   line-height: 1.6rem;
 }
-.container{
+.contain{
   max-width: 1200px;
   margin: auto;
 }
@@ -27,4 +27,122 @@
   margin-bottom: 20px;
 }
 @media (min-width: 200px) and (max-width: 600px) {
+  .feature-heading-div {
+    height: 415px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 25px 15px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1rem;
+  }
+  .contain{
+    max-width: unset;
+    margin: auto;
+  }
+  .left-feature-div {
+    float: unset;
+    width: 290px;
+    padding: 10px;
+    margin: auto;
+  }
+  .featureHead{
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .featurePara{
+    font-size: 14px;
+    line-height: 1.2rem;
+  }
+  .right-feature-div {
+    float: unset;
+    width: 290px;
+    padding: 10px;
+    margin: auto;
+  }
+  .feature-image{
+    width: 35px;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .feature-heading-div {
+    height: 445px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 30px 60px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4rem;
+  }
+  .contain{
+    max-width: unset;
+    margin: auto;
+  }
+  .left-feature-div {
+    float: unset;
+    width: 315px;
+    padding: 5px;
+    margin: auto;
+  }
+  .featureHead{
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .featurePara{
+    font-size: 15px;
+    line-height: 1.3rem;
+  }
+  .right-feature-div {
+    float: unset;
+    width: 325px;
+    padding: 5px;
+    margin: auto;
+  }
+  .feature-image{
+    width: 40px;
+    margin-bottom: 17px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+  .feature-heading-div {
+    height: 345px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 60px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4rem;
+  }
+  .contain{
+    max-width: unset;
+    margin: auto;
+  }
+  .left-feature-div {
+    float: left;
+    width: 50%;
+    padding: 10px 50px;
+    margin: auto;
+  }
+  .featureHead{
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+  .featurePara{
+    font-size: 16px;
+    line-height: 1.35rem;
+  }
+  .right-feature-div {
+    float: left;
+    width: 50%;
+    padding: 10px 50px;
+    margin: auto;
+  }
+  .feature-image{
+    width: 45px;
+    margin-bottom: 18px;
+  }
 }

@@ -117,12 +117,10 @@ const SignUpForm = () => {
             <p>
               By signing up, you agree to the
               <span>
-              <Link to="/subscribe">
                 <a className="terms-link" href="localhost:3000">
                   {" "}
                   Terms of Service{" "}
                 </a>
-              </Link>
               </span>{" "}
               and
               <span>

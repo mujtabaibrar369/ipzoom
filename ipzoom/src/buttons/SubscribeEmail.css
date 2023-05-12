@@ -1,51 +1,64 @@
-.seePlan{
+.subscribe-btn{
     border-radius: 25px;
     background-color: transparent;
-    padding: 10px 30px;
-    font-weight: bolder;
+    padding: 7px 15px;
     margin-bottom: 100px;
-    color: black;
+    color: white;
     font-family: "Montserrat", sans-serif;
     border: 1px solid rgb(8, 254, 209);
+    font-size: 13px;
+    float: right;
+    margin-right: 110px;
+    font-weight: bold;
 }
-.seePlan:hover{
+.subscribe-btn:hover{
     background-image: linear-gradient(to right, rgb(102, 250, 10) , rgb(8, 254, 209));
     color: black;
     border: 1px solid transparent;
+    font-weight: bold;
 }
 @media (min-width: 200px) and (max-width: 600px) {
-    .seePlan{
-        border-radius: 25px;
+    .subscribe-btn{
+        border-radius: 20px;
         background-color: transparent;
-        padding: 8px 25px;
-        font-weight: bolder;
+        padding: 6px 12px;
         margin-bottom: 30px;
-        color: black;
+        color: white;
         font-family: "Montserrat", sans-serif;
         border: 1px solid rgb(8, 254, 209);
+        font-size: 12px;
+        float: right;
+        margin-right: 0px;
+        font-weight: 400;
     }
 }
 @media (min-width: 600px) and (max-width: 900px) {
-    .seePlan{
+    .subscribe-btn{
         border-radius: 25px;
         background-color: transparent;
-        padding: 10px 30px;
-        font-weight: bolder;
-        margin-bottom: 30px;
-        color: black;
+        padding: 8px 15px;
+        margin-bottom: 10px;
+        color: white;
         font-family: "Montserrat", sans-serif;
         border: 1px solid rgb(8, 254, 209);
+        font-size: 12px;
+        float: right;
+        margin-right: 0px;
+        font-weight: 400;
     }
 }
 @media (min-width: 900px) and (max-width: 1300px) {
-    .seePlan{
+    .subscribe-btn{
         border-radius: 25px;
         background-color: transparent;
-        padding: 10px 30px;
-        font-weight: bolder;
-        margin-bottom: 50px;
-        color: black;
+        padding: 9px 18px;
+        margin-bottom: 10px;
+        color: white;
         font-family: "Montserrat", sans-serif;
         border: 1px solid rgb(8, 254, 209);
+        font-size: 12px;
+        float: right;
+        margin-right: 0px;
+        font-weight: 400;
     }
 }

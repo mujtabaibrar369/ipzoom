@@ -1,7 +1,7 @@
 import "./Footer.css";
 import Logo from "./logo.png";
 import { Link } from "react-router-dom";
-import Subscribe from "../buttons/Subscribe";
+import SubscribeEmail from "../buttons/SubscribeEmail";
 const Footer = (props) => {
     return (
       <div className="footer-navbar">
@@ -15,7 +15,11 @@ const Footer = (props) => {
                 <h5 className="product-text">Product</h5>
                 <ul className="product-list">
                     <li className="product-li"><a className="li-link" href="#">Features</a></li>
-                    <li className="product-li"><a className="li-link" href="#">Pricing</a></li>
+                    <li className="product-li">
+                        <Link to="pricing">
+                            <a className="li-link" href="#">Pricing</a>
+                        </Link>
+                    </li>
                     <li className="product-li"><a className="li-link" href="#">Docs</a></li>
                     <li className="product-li"><a className="li-link" href="#">Blog</a></li>
                 </ul>
@@ -31,7 +35,7 @@ const Footer = (props) => {
                         placeholder="your email"
                         className="email-div"
                     />
-                    <Subscribe></Subscribe>
+                    <SubscribeEmail></SubscribeEmail>
                 </div>
             </div>
         </div>

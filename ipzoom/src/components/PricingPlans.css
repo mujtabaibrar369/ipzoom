@@ -70,3 +70,77 @@
         margin-bottom: 20px;
     }
 }
+@media (min-width: 600px) and (max-width: 900px) {
+    .pricing-div{
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+    }
+    .plans{
+        max-width: unset;
+        margin: auto;
+        overflow: hidden;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }
+    .plan-div{
+        width: 46.6%;
+        float: left;
+        margin: 0px 10px 20px 10px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        border-radius: 3px;
+        padding: 25px 12px; 
+    }
+    .free-text{
+        font-size: 22px;
+        font-weight: bolder;
+        margin: 5px 0px;
+    }
+    .plan-specs{
+        margin-bottom: 5px;
+    }
+    .developerLicense{
+        margin-bottom:50px;
+    }
+    .ssl-text{
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+    .pricing-div{
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+    }
+    .plans{
+        max-width: unset;
+        margin: auto;
+        overflow: hidden;
+        padding-bottom: 40px;
+        margin-top: 65px;
+    }
+    .plan-div{
+        width: 30.4%;
+        float: left;
+        margin: 0px 0px 0px 20px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        border-radius: 3px;
+        padding: 35px 25px;
+    }
+    .free-text{
+        font-size: 25px;
+        font-weight: bolder;
+        margin: 10px 0px;
+    }
+    .plan-specs{
+        margin-bottom: 5px;
+    }
+    .developerLicense{
+        margin-bottom:50px;
+    }
+    .ssl-text{
+        margin-bottom: 20px;
+    }
+}
