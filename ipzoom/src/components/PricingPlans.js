@@ -3,6 +3,7 @@ import Header from "./Header";
 import FreeSignUp from "../buttons/FreeSignUp";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const PricingPlans = () => {
   const [Logged, setIsLogged] = useState();
@@ -30,7 +31,7 @@ const PricingPlans = () => {
           },
           onApprove: async function (data, actions) {
             const token = localStorage.getItem("AccessToken");
-            await axios.patch(
+            const response = await axios.patch(
               "http://localhost:5000/api/users/createSubscription",
               { subscriptionID: data.subscriptionID },
               {
@@ -39,6 +40,7 @@ const PricingPlans = () => {
                 },
               }
             );
+            toast.success(response.data);
           },
         })
         .render("#paypal-button-container-P-7CD25924B04716625MQJU2FA");
@@ -52,7 +54,7 @@ const PricingPlans = () => {
           },
           onApprove: async function (data, actions) {
             const token = localStorage.getItem("AccessToken");
-            await axios.patch(
+            const response = await axios.patch(
               "http://localhost:5000/api/users/createSubscription",
               { subscriptionID: data.subscriptionID },
               {
@@ -61,6 +63,7 @@ const PricingPlans = () => {
                 },
               }
             );
+            toast.success(response.data);
           },
         })
         .render("#paypal-button-container-P-16U6598210255521XMQKXDQI");

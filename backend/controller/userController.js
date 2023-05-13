@@ -326,9 +326,9 @@ const createSubscription = async (req, res) => {
         }
       }
     }
-    res.send("Subscription Created.");
+    res.json("Subscription Created.");
   } catch (error) {
-    console.log(error.message);
+    res.json(error.message);
   }
 };
 const getSubscription = async (req, res) => {

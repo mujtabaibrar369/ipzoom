@@ -46,7 +46,7 @@ const SignUpForm = () => {
             console.log(data.AccessToken);
             localStorage.setItem("AccessToken", data.AccessToken);
             toast.success("User Register Successfully");
-            // window.location.href='/';
+            window.location.href = "/";
           } else {
             console.log(data);
             toast.error(data);
