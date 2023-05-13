@@ -17,14 +17,16 @@ const allowCrossOrigin = (req, res, next) => {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS,PATCH"
+  );
   next();
 };
 app.use(allowCrossOrigin);
 
 const PORT = process.env.PORT || 5000;
 app.use("/api/users", userRoute);
-
 app.get("/", (req, res) => {
   res.send("Home Page");
 });

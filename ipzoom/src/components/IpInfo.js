@@ -24,18 +24,26 @@ const IpInfo = () => {
   const [organization, setOrganization] = useState("");
   const [timeZone, setTimeZone] = useState("");
   const [ipToSearch, setIpToSearch] = useState("");
-  const getIpInfo = async () => {
+  const [vpnDetection, setVpnDetection] = useState("");
+  const [ipD, setIpd] = useState();
+
+  const searchIpInfo = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/users/checkUserIp"
+        `http://localhost:5000/api/users/searchUserIp/${ipToSearch}`
       );
+      const vpnDetection = await axios.get(
+        `http://localhost:5000/api/users/checkVpn/${ipToSearch}`
+      );
+      let vpn = JSON.stringify(vpnDetection.data);
+      setVpnDetection(vpn);
       return data;
     } catch (error) {
       console.log(error.message);
     }
   };
   const retrieveIpInformation = async () => {
-    const ipInformation = await getIpInfo();
+    const ipInformation = await searchIpInfo();
     const ip = ipInformation.ip;
     const city = ipInformation.city;
     const continentCode = ipInformation.continent_code;
@@ -62,22 +70,22 @@ const IpInfo = () => {
     setLongitude(Longitude);
     setOrganization(Organization);
     setTimeZone(timeZone);
-    console.log(ipInformation);
   };
   const searchInputHandler = (e) => {
     setIpToSearch(e.target.value);
   };
 
   const searchHandler = async () => {
-    console.log(ipToSearch);
-    const ipdata = await axios.get(
-      `http://localhost:5000/api/users/searchUserIp/${ipToSearch}`
-    );
-    console.log(ipdata);
+    setIpd(ipD);
+    retrieveIpInformation();
+    // const ipdata = await axios.get(
+    //   `http://localhost:5000/api/users/searchUserIp/${ipToSearch}`
+    // );
+    //console.log(ipdata);
   };
   useEffect(() => {
     retrieveIpInformation();
-  }, []);
+  }, [ipD]);
   return (
     <div className="ip_info">
       <div className="search_bar">
@@ -111,9 +119,13 @@ const IpInfo = () => {
           latitude: "{latitude}",<br></br>
           longitude: "{longitude}",<br></br>
           organization: "{organization}",<br></br>
-          timezone: "{timeZone}"
+          timezone: "{timeZone}",<br></br>
         </p>
-        <p className="curly-brace">{"}"}</p>
+        <p className="curly-brace">
+          {"}"}
+          <br></br>
+          {vpnDetection}
+        </p>
       </div>
       <div className="search_ip_buttons">
         <YourIpAddress></YourIpAddress>

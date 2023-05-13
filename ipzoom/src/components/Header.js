@@ -15,11 +15,24 @@ import { toast } from "react-toastify";
 import DashboardButton from "../buttons/DashboardButton";
 import PayPalProButton from "../buttons/PayPalProButton";
 const Header = (props) => {
+  async function checkLogin() {
+    const token = localStorage.getItem("AccessToken");
+    let response = await axios.get(
+      "http://localhost:5000/api/users/isLogedIn",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  }
   const [status, setStatus] = useState();
   useEffect(() => {
     const token = localStorage.getItem("AccessToken");
+
     if (token) {
       setStatus(true);
+      checkLogin();
     } else {
       setStatus(false);
     }

@@ -1,4 +1,5 @@
 const User = require("../model/userModel");
+var fetch = require("node-fetch");
 const Token = require("../model/tokenModel");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
@@ -7,6 +8,7 @@ const axios = require("axios");
 const API_KEY = "a2a27d746a9f48dca3086f00fdfd6435";
 const isIPProxy = require("is-ip-proxy");
 const sendEmail = require("../utils/mailSender");
+const Subscription = require("../model/subscriptionModel");
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 };
@@ -98,7 +100,25 @@ const userProfile = async (req, res) => {
     res.status(403).send("Forbidden");
   }
 };
-const isLogedIn = async (req, res) => {};
+const isLogedIn = async (req, res) => {
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
+  console.log(token);
+
+  if (!token) {
+    return res.status(401).send("Unauthorized");
+  }
+  try {
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    if (verified) {
+      res.json(true);
+    } else {
+      res.json(false);
+    }
+  } catch (error) {
+    res.status(403).send("Forbidden");
+  }
+};
 const changePassword = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -202,20 +222,16 @@ const resetPassword = async (req, res) => {
     res.status(200).json("Password reset successfully");
   }
 };
-// http://172.16.221.91:6117/geo_IP?ip=175.216.39.11
 const searchUserIp = async (req, res) => {
   try {
     const ipAddress = req.params.ip;
     console.log(ipAddress);
-    // const IpInfo = await axios.get(
-    //   `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ipAddress.data.ip}`
-    // );
-
-    const ipinfo = await axios.get(
-      `http://172.16.221.91:6117/geo_IP?ip=${ipAddress}`
+    const ipInfo = await axios.get(
+      `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ipAddress}`
     );
-    if (ipinfo) {
-      res.json(ipinfo.data);
+
+    if (ipInfo) {
+      res.json(ipInfo.data);
     } else {
       res.json("Not responding");
     }
@@ -224,13 +240,14 @@ const searchUserIp = async (req, res) => {
   }
 };
 const checkVpn = async (req, res) => {
-  const ip = req.body.ip;
+  const ip = req.params.ip;
+  console.log(ip);
   if (ip) {
     const result = await isIPProxy.check(ip);
-    if (result === false) {
-      res.json({ Vpn_detected: "false" });
-    } else {
+    if (result === true) {
       res.json({ Vpn_detected: "true" });
+    } else {
+      res.json({ Vpn_detected: "false" });
     }
   }
 };
@@ -245,6 +262,7 @@ const checkUserIp = async (req, res) => {
     );
     if (ipinfo) {
       res.json(ipinfo.data);
+      console.log(ipinfo.data);
     } else {
       res.json("Not responding");
     }
@@ -252,34 +270,56 @@ const checkUserIp = async (req, res) => {
     res.json(error.message);
   }
 };
-const subscription = async (req, res) => {
-  res.send(` <div id="paypal-button-container-P-7CD25924B04716625MQJU2FA"></div>
-    <script
-      src="https://www.paypal.com/sdk/js?client-id=Ae4QL8MSUamULntRT53PwEqZDs61m4t7n8pcBwbbDAJi6T0eRSjurFrngqyVr-pMSOPB1enID5jltbtc&vault=true&intent=subscription"
-      data-sdk-integration-source="button-factory"
-    ></script>
-    <script>
-      paypal
-        .Buttons({
-          style: {
-            shape: "pill",
-            color: "blue",
-            layout: "vertical",
-            label: "subscribe",
-          },
-          createSubscription: function (data, actions) {
-            return actions.subscription.create({
-              /* Creates the subscription */
-              plan_id: "P-7CD25924B04716625MQJU2FA",
-            });
-          },
-          onApprove: function (data, actions) {
-            alert(data.subscriptionID); // You can add optional success message for the subscriber here
-            console.log(subscription);
-          },
-        })
-        .render("#paypal-button-container-P-7CD25924B04716625MQJU2FA"); // Renders the PayPal button
-    </script>`);
+const createSubscription = async (req, res) => {
+  try {
+    const subscriptionID = req.body.subscriptionID;
+    const token = req.headers["authorization"];
+    const auth =
+      "QWU0UUw4TVNVYW1VTG50UlQ1M1B3RXFaRHM2MW00dDduOHBjQndiYkRBSmk2VDBlUlNqdXJGcm5ncXlWci1wTVNPUEIxZW5JRDVqbHRidGM6RUk5RmdWV3ZrOHBsdGJqOEdoQ0xCV3Y0X2FXNVE2LVBkdXp3RzFqb3JVd3Z4cVZuWTRNakhsbEFDVmZfX2VrY1otQjYzRG5rU0xlZ25mV2Y="; // paypal client id and secret code encoded to base 64
+    const { data } = await axios.get(
+      `https://api-m.sandbox.paypal.com/v1/billing/subscriptions/${subscriptionID}`,
+      {
+        headers: {
+          "X-PAYPAL-SECURITY-CONTEXT":
+            '{"consumer":{"accountNumber":1181198218909172527,"merchantId":"5KW8F2FXKX5HA"},"merchant":{"accountNumber":1659371090107732880,"merchantId":"2J6QB8YJQSJRJ"},"apiCaller":{"clientId":"Ae4QL8MSUamULntRT53PwEqZDs61m4t7n8pcBwbbDAJi6T0eRSjurFrngqyVr-pMSOPB1enID5jltbtc","appId":"APP-6DV794347V142302B","payerId":"2J6QB8YJQSJRJ","accountNumber":"1659371090107732880"},"scopes":["https://api-m.paypal.com/v1/subscription/.*","https://uri.paypal.com/services/subscription","openid"]}',
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: `Basic ${auth}`,
+        },
+      }
+    );
+    if (data) {
+      const verified = jwt.verify(token, process.env.JWT_SECRET);
+      if (verified) {
+        const uID = verified.id;
+        const user = await User.findById(uID);
+        if (user) {
+          await Subscription.create({
+            userId: user._id,
+            subscriptionStatus: data.status,
+            subscriptionId: data.id,
+            planId: data.plan_id,
+          });
+        }
+      }
+      res.send("Subscription Created.");
+    }
+  } catch (error) {
+    res.send(error.message);
+  }
+};
+const getSubscription = async (req, res) => {
+  const token = req.headers["authorization"];
+  if (token) {
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    if (verified) {
+      const uID = verified.id;
+      const data = await Subscription.findOne({ userId: uID });
+      res.json(data);
+    }
+  } else {
+    res.send("Not Available");
+  }
 };
 module.exports = {
   registerUser,
@@ -291,7 +331,8 @@ module.exports = {
   resetPassword,
   checkUserIp,
   checkVpn,
-  subscription,
   searchUserIp,
   forgotPassword,
+  createSubscription,
+  getSubscription,
 };

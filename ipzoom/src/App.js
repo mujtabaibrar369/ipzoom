@@ -11,7 +11,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./components/Dashboard";
 import Subscribe from "./components/Subscribe";
-
 function App() {
   return (
     <div>

@@ -4,21 +4,28 @@ import { Link } from "react-router-dom";
 import SetPassword from "../buttons/SetPassword";
 import { useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 const SetNewPassword = () => {
+  const token = useParams();
   const [pass, SetPass] = useState();
   const handleChange = (e) => {
     SetPass({ ...pass, [e.target.name]: e.target.value });
   };
   const submitHandler = async (e) => {
     e.preventDefault();
+    console.log(token.resetToken);
+
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
     if (password === confirmPassword) {
       const response = await axios.put(
-        "http://localhost:5000/api/users/resetPassword/:resetToken",
-        password
+        `http://localhost:5000/api/users/resetPassword/${token.resetToken}`,
+        pass
       );
-      console.log(response.data);
+      toast.success(response.data);
+    } else {
+      toast.error("Password and confirm password does not matched");
     }
   };
   return (

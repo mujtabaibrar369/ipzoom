@@ -10,13 +10,16 @@ const Dashboard = () => {
   const [userFirstName, setUserFirstName] = useState("");
   const [userLastName, setUserLastName] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  const [subscriptionStatus, setSubscriptionStatus] =
+    useState("Not Subscribed Yet");
+  const [subscriptionID, setSubscriptionID] = useState("-");
 
   const token = localStorage.getItem("AccessToken");
   useEffect(() => {
     if (token) {
       async function fetchUser() {
         try {
-          const response = await axios.get(
+          const userResponse = await axios.get(
             "http://localhost:5000/api/users/getUser",
             {
               headers: {
@@ -24,9 +27,20 @@ const Dashboard = () => {
               },
             }
           );
-          setUserFirstName(response.data.firstName);
-          setUserLastName(response.data.lastName);
-          setUserEmail(response.data.email);
+          const subscriptionResponse = await axios.get(
+            "http://localhost:5000/api/users/getsubscription",
+            {
+              headers: {
+                authorization: token,
+              },
+            }
+          );
+          console.log(subscriptionResponse);
+          setUserFirstName(userResponse.data.firstName);
+          setUserLastName(userResponse.data.lastName);
+          setUserEmail(userResponse.data.email);
+          setSubscriptionStatus(subscriptionResponse.data.subscriptionStatus);
+          setSubscriptionID(subscriptionResponse.data.subscriptionId);
         } catch (error) {
           console.log("Error fetching user", error);
         }
@@ -57,10 +71,12 @@ const Dashboard = () => {
             Email Address: <span className="personal-value">{userEmail}</span>
           </p>
           <p className="personal-info">
-            Subscription Id: <span className="personal-value">124jk431</span>
+            Subscription Id:{" "}
+            <span className="personal-value">{subscriptionID}</span>
           </p>
           <p className="personal-info">
-            Subscription Status: <span className="personal-value">Active</span>
+            Subscription Status:{" "}
+            <span className="personal-value">{subscriptionStatus}</span>
           </p>
         </div>
         <div className="dashboard-main">
@@ -96,7 +112,6 @@ const Dashboard = () => {
               <p className="current-text">Current Subscription</p>
               <p className="subscription-value">Free</p>
             </div>
-            <PayPalProButton />
           </div>
         </div>
       </div>
