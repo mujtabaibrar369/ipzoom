@@ -11,13 +11,45 @@
 @media (min-width: 200px) and (max-width: 600px) {
   .slogan_div {
     font-family: "Montserrat", sans-serif;
-    color: black;
+    color: white;
     text-align: center;
-    margin: 80px auto 0px auto;
-    width: unset;
+    margin: 30px auto 0px auto;
+    width: 245px;
   }
   .slogan-heading{
     font-size: 17px;
+  }
+  .slogan-span {
+    font-weight: bold;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .slogan_div {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 30px auto 0px auto;
+    width: 325px;
+  }
+  .slogan-heading{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .slogan-span {
+    font-weight: bold;
+  }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+  .slogan_div {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 30px auto 0px auto;
+    width: 410px;
+  }
+  .slogan-heading{
+    font-size: 25px;
+    line-height: 1.8rem;
   }
   .slogan-span {
     font-weight: bold;

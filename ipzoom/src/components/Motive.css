@@ -4,11 +4,11 @@
   font-family: "Montserrat", sans-serif;
   line-height: 1.6rem;
 }
-.line{
+/* .line{
   border: 20px;
   border-color: black;
   width: 30px;
-}
+} */
 .motive{
   margin-bottom: 20px;
   font-weight: bolder;
@@ -22,4 +22,71 @@
   font-weight: 500;
 }
 @media (min-width: 200px) and (max-width: 600px) {
+  .motive-div {
+    color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2rem;
+    width: 280px;
+    margin: auto;
+  }
+  .motive{
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 17px;
+  }
+  .suitable-para{
+    width: unset;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 500;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .motive-div {
+    color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4rem;
+    width: 380px;
+    margin: auto;
+  }
+  .motive{
+    margin-bottom: 12px;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  .suitable-para{
+    width: unset;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 500;
+  }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+  .motive-div {
+    color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5rem;
+    width: 435px;
+    margin: auto;
+  }
+  .motive{
+    margin-bottom: 13px;
+    font-weight: bolder;
+    font-size: 23px;
+  }
+  .suitable-para{
+    width: unset;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 23px;
+    color: black;
+    font-weight: 500;
+  }
 }

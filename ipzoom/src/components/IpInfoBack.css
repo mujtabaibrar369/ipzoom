@@ -6,4 +6,32 @@
     height: 600px;
 }
 @media (min-width: 200px) and (max-width: 600px) {
+    .ip_info_back{
+        width: 100%;
+        display: none;
+    }
+    .back_img{
+        width: 100%;
+        height: 630px;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .ip_info_back{
+        width: 100%;
+        display: none;
+    }
+    .back_img{
+        width: 100%;
+        height: 630px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+    .ip_info_back{
+        width: 100%;
+        display: none;
+    }
+    .back_img{
+        width: 100%;
+        height: 520px;
+    }
 }

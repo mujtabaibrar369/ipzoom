@@ -1,6 +1,7 @@
 import "./PricingPlans.css";
 // import { Link } from "react-router-dom";
 import Header from "./Header";
+<<<<<<< HEAD
 // import FreeSignUp from "../buttons/FreeSignUp";
 // import SubscribeNow from "../buttons/SubscribeNow";
 // import { useEffect, useState } from "react";
@@ -77,6 +78,14 @@ import Header from "./Header";
 import React, { useEffect } from "react";
 import axios from "axios";
 
+=======
+import FreeSignUp from "../buttons/FreeSignUp";
+import SubscribeNow from "../buttons/SubscribeNow";
+import { useEffect, useState } from "react";
+import SubscribeNowFree from "../buttons/SubscribeNowFree";
+import SubscribeNowEnterprice from "../buttons/SubscribeNowEnterprice";
+import Footer from "./Footer";
+>>>>>>> 03a1ecd480dbb5920a69904e5ce902891743a6f3
 const PricingPlans = () => {
   useEffect(() => {
     const script = document.createElement("script");

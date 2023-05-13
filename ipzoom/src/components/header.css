@@ -1,20 +1,23 @@
-.navbar{
+.navbarDiv{
   max-width: 1300px;
   margin: auto;
   overflow: hidden;
 }
 .header{
   width: 33%;
+  float: left;
 }
 .navbar-buttons{
   width: 67%;
+  float: left;
+  margin-top: 5px;
 }
 .logo{
   width: 45%;
   margin-top: 10px;
 }
 @media (min-width: 200px) and (max-width: 600px) {
-  .navbar{
+  .navbarDiv{
     max-width: unset;
     margin: unset;
     overflow: hidden;
@@ -26,7 +29,41 @@
     width: 45%;
   }
   .logo{
-    width: 90%;
+    width: 150px;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .navbarDiv{
+    max-width: unset;
+    margin: unset;
+    overflow: hidden;
+  }
+  .header{
+    width: 55%;
+  }
+  .navbar-buttons{
+    width: 45%;
+  }
+  .logo{
+    width: 150px;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+  .navbarDiv{
+    max-width: unset;
+    margin: unset;
+    overflow: hidden;
+  }
+  .header{
+    width: 55%;
+  }
+  .navbar-buttons{
+    width: 45%;
+  }
+  .logo{
+    width: 150px;
     margin-top: 10px;
   }
 }

@@ -17,3 +17,51 @@
     color: black;
     border: 2px solid transparent;
 }
+@media (min-width: 200px) and (max-width: 600px) {
+    .AttackerIp{
+        font-family: "Montserrat", sans-serif;
+        display: inline;
+        margin-right: 10px;
+    }
+    .AttackerIpButton{
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid #94ff49;
+        border-radius: 25px;
+        font-weight: bold;
+        color: black;
+        padding: 5px 12px;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .AttackerIp{
+        font-family: "Montserrat", sans-serif;
+        display: inline;
+        margin-right: 15px;
+    }
+    .AttackerIpButton{
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid #94ff49;
+        border-radius: 25px;
+        font-weight: bold;
+        color: black;
+        padding: 6px 15px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+    .AttackerIp{
+        font-family: "Montserrat", sans-serif;
+        display: inline;
+        margin-right: 15px;
+    }
+    .AttackerIpButton{
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid #94ff49;
+        border-radius: 25px;
+        font-weight: bold;
+        color: black;
+        padding: 6px 15px;
+    }
+}

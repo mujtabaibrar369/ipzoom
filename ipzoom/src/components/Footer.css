@@ -71,4 +71,212 @@
     color: white;
 }
 @media (min-width: 200px) and (max-width: 600px) {
+    .footer-navbar{
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.3rem;
+        height: 345px;
+        padding: 0px 15px;
+    }
+    .footer-container{
+        max-width: unset;
+        margin: auto;
+    }
+    .footer-logo-div{
+        width: 45%;
+        margin-right: unset;
+        float: left;
+        margin-top: 35px;
+    }
+    .footer-logo{
+        width: 135px;
+    }
+    .footer-product-div{
+        width: 44%;
+        float: left;
+        color: white;
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    .product-text{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 19px;
+    }
+    .product-list{
+        list-style: none;
+        color: white;
+        padding: 0px;
+    }
+    .product-li{
+        margin-bottom: 7px;
+    }
+    .li-link{
+        color: white;
+        font-size: 15px;
+    }
+    .footer-support-div{
+        width: 35%;
+        float: left;
+        color: white;
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+    .subscription-div{
+        width: 52%;
+        float: right;
+        margin-top: 30px;
+    }
+    .email-div{
+        width: 100%;
+        border: 1px solid rgb(102, 250, 10);
+        background-color: transparent;
+        padding: 8px;
+        padding-left: 15px;
+        border-radius: 20px;
+        font-size: 12px;
+        margin-bottom: 12px;
+        float: right;
+        margin-right: 0px;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .footer-navbar{
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.4rem;
+        height: 350px;
+        padding: 0px 20px;
+    }
+    .footer-container{
+        max-width: unset;
+        margin: auto;
+    }
+    .footer-logo-div{
+        width: 35%;
+        margin-right: unset;
+        float: left;
+        margin-top: 35px;
+    }
+    .footer-logo{
+        width: 150px;
+    }
+    .footer-product-div{
+        width: 28%;
+        float: left;
+        color: white;
+        margin-top: 45px;
+        margin-left: 30px;
+    }
+    .product-text{
+        margin-bottom: 11px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .product-list{
+        list-style: none;
+        color: white;
+        padding: 0px;
+    }
+    .product-li{
+        margin-bottom: 7px;
+    }
+    .li-link{
+        color: white;
+        font-size: 15px;
+    }
+    .footer-support-div{
+        width: 30%;
+        float: left;
+        color: white;
+        margin-top: 45px;
+        margin-left: 5px;
+    }
+    .subscription-div{
+        width: 45%;
+        float: right;
+        margin-top: 20px;
+    }
+    .email-div{
+        width: 100%;
+        border: 1px solid rgb(102, 250, 10);
+        background-color: transparent;
+        padding: 9px;
+        padding-left: 20px;
+        border-radius: 25px;
+        font-size: 12px;
+        margin-bottom: 14px;
+        float: right;
+        margin-right: 0px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+    .footer-navbar{
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.4rem;
+        height: 250px;
+        padding: 0px 25px;
+    }
+    .footer-container{
+        max-width: unset;
+        margin: auto;
+    }
+    .footer-logo-div{
+        width: 23%;
+        margin-right: unset;
+        float: left;
+        margin-top: 35px;
+    }
+    .footer-logo{
+        width: 160px;
+    }
+    .footer-product-div{
+        width: 17%;
+        float: left;
+        color: white;
+        margin-top: 47px;
+        margin-left: 25px;
+    }
+    .product-text{
+        margin-bottom: 11px;
+        font-weight: bold;
+        font-size: 21px;
+    }
+    .product-list{
+        list-style: none;
+        color: white;
+        padding: 0px;
+    }
+    .product-li{
+        margin-bottom: 8px;
+    }
+    .li-link{
+        color: white;
+        font-size: 15px;
+    }
+    .footer-support-div{
+        width: 17%;
+        float: left;
+        color: white;
+        margin-top: 47px;
+        margin-left: 25px;
+    }
+    .subscription-div{
+        width: 37%;
+        float: right;
+        margin-top: 50px;
+    }
+    .email-div{
+        width: 95%;
+        border: 1px solid rgb(102, 250, 10);
+        background-color: transparent;
+        padding: 10px;
+        padding-left: 20px;
+        border-radius: 25px;
+        font-size: 12px;
+        margin-bottom: 14px;
+        float: right;
+        margin-right: 0px;
+    }
 }

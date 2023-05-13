@@ -1,5 +1,5 @@
-import "./Subscribe.css";
-const Subscribe = () => {
+import "./SubscribeEmail.css";
+const SubscribeEmail = () => {
   return (
     <div className="Subscribe">
       <button className="subscribe-btn" type="submit">
@@ -8,4 +8,4 @@ const Subscribe = () => {
     </div>
   );
 };
-export default Subscribe;
+export default SubscribeEmail;
