@@ -34,6 +34,13 @@ const registerUser = async (req, res) => {
       password,
     });
     if (user) {
+      const apiKey = crypto.randomBytes(32).toString("hex") + user._id;
+
+      await Subscription.create({
+        userId: user._id,
+        email: user.email,
+        apiKey: apiKey,
+      });
       const token = generateToken(user._id);
       res.json({ AccessToken: token });
     } else {
@@ -276,7 +283,6 @@ const checkUserIp = async (req, res) => {
 };
 const createSubscription = async (req, res) => {
   try {
-    const apiKey = crypto.randomBytes(32).toString("hex");
     const subscriptionID = req.body.subscriptionID;
     const token = req.headers["authorization"];
     const auth =
@@ -293,6 +299,7 @@ const createSubscription = async (req, res) => {
         },
       }
     );
+    console.log(data);
     if (data) {
       const verified = jwt.verify(token, process.env.JWT_SECRET);
       if (verified) {
@@ -306,24 +313,22 @@ const createSubscription = async (req, res) => {
           planName = "Enterprise";
         }
         if (user) {
-          try {
-            await Subscription.create({
-              userId: user._id,
-              subscriptionStatus: data.status,
-              subscriptionId: data.id,
-              planId: data.plan_id,
-              apiKey: apiKey,
-              planName: planName,
-            });
-          } catch (errror) {
-            console.log(errror);
+          const apiKey = crypto.randomBytes(32).toString("hex") + user._id;
+          const subscription = await Subscription.findOne({ userId: user._id });
+          if (subscription) {
+            subscription.subscriptionStatus = data.status;
+            subscription.subscriptionId = data.id;
+            subscription.planId = data.plan_id;
+            subscription.planName = planName;
+            subscription.apiKey = apiKey;
+            await subscription.save();
           }
         }
       }
-      res.send("Subscription Created.");
     }
+    res.send("Subscription Created.");
   } catch (error) {
-    res.send(error.message);
+    console.log(error.message);
   }
 };
 const getSubscription = async (req, res) => {
@@ -347,10 +352,32 @@ const restApi = async (req, res) => {
   const IP = parsedQuery.get("ip");
   const subscription = await Subscription.findOne({ apiKey: apiKey });
   if (subscription) {
-    const IpInfo = await axios.get(
-      `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${IP}`
-    );
-    res.json(IpInfo.data);
+    let requestCount = subscription.counter;
+    requestCount = requestCount + 1;
+    subscription.counter = requestCount;
+    await subscription.save();
+    console.log(subscription.counter);
+    if (subscription.planName === "Free" && subscription.counter <= 10) {
+      const IpInfo = await axios.get(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${IP}`
+      );
+      res.json(IpInfo.data);
+    } else if (
+      subscription.planName === "Professional" &&
+      subscription.counter <= 5
+    ) {
+      const IpInfo = await axios.get(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${IP}`
+      );
+      res.json(IpInfo.data);
+    } else if (subscription.planName === "Enterprise") {
+      const IpInfo = await axios.get(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${IP}`
+      );
+      res.json(IpInfo.data);
+    } else {
+      res.json("Usage limit exceeded");
+    }
   } else {
     res.json("Invalid Api KEY");
   }

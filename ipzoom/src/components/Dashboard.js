@@ -36,7 +36,6 @@ const Dashboard = () => {
               },
             }
           );
-          console.log(subscriptionResponse);
           setUserFirstName(userResponse.data.firstName);
           setUserLastName(userResponse.data.lastName);
           setUserEmail(userResponse.data.email);
@@ -49,6 +48,7 @@ const Dashboard = () => {
         }
       }
       fetchUser();
+
       setStatus(true);
     } else {
       setStatus(false);
@@ -107,7 +107,7 @@ const Dashboard = () => {
             </div>
             <div className="limits-div">
               <p className="limits-text">Limits</p>
-              <p className="usage-value">100</p>
+              <p className="usage-value">100 </p>
             </div>
             <div className="current-subscription-div">
               <p className="current-text">Current Subscription</p>

@@ -6,10 +6,15 @@ const subscriptionSchema = mongoose.Schema({
     required: true,
     ref: "user,",
   },
+  email: {
+    type: String,
+    unique: true,
+    trim: true,
+  },
   subscriptionStatus: {
     type: String,
     required: true,
-    default: "Not Available",
+    default: "Free",
   },
   subscriptionId: {
     type: String,
@@ -28,9 +33,10 @@ const subscriptionSchema = mongoose.Schema({
   },
   apiKey: {
     type: String,
-    required: true,
-    unique: true,
-    default: "null",
+  },
+  counter: {
+    type: Number,
+    default: 0,
   },
 });
 const Subscription = mongoose.model("Subscription", subscriptionSchema);
