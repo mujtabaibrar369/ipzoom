@@ -1,0 +1,16 @@
+.javascriptDiv {
+    display: inline;
+  }
+  .javascriptButton {
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    margin: 20px 60px 0px 0px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .javascriptButton:hover{
+    color: rgb(102, 250, 10);
+  }

@@ -1,0 +1,24 @@
+.apiDocsMain{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+.apiHeader{
+    background-color: black;
+}
+.docsContain{
+    max-width: 1100px;
+    margin: auto;
+}
+.headingDocs{
+    margin: auto;
+}
+.apiDocument{
+    width: 500px;
+    text-align: center;
+    margin: 70px auto 30px auto;
+}
+.apiDocPara{
+    width: 740px;
+    text-align: center;
+    margin: auto;
+}
