@@ -9,6 +9,10 @@ const API_KEY = "a2a27d746a9f48dca3086f00fdfd6435";
 const isIPProxy = require("is-ip-proxy");
 const sendEmail = require("../utils/mailSender");
 const Subscription = require("../model/subscriptionModel");
+const { URL, URLSearchParams } = require("url");
+const querystring = require("querystring");
+const { log } = require("console");
+
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 };
@@ -272,6 +276,7 @@ const checkUserIp = async (req, res) => {
 };
 const createSubscription = async (req, res) => {
   try {
+    const apiKey = crypto.randomBytes(32).toString("hex");
     const subscriptionID = req.body.subscriptionID;
     const token = req.headers["authorization"];
     const auth =
@@ -291,15 +296,28 @@ const createSubscription = async (req, res) => {
     if (data) {
       const verified = jwt.verify(token, process.env.JWT_SECRET);
       if (verified) {
+        console.log(verified);
         const uID = verified.id;
         const user = await User.findById(uID);
+        let planName = "Free";
+        if (data.plan_id == "P-7CD25924B04716625MQJU2FA") {
+          planName = "Professional";
+        } else if (data.plan_id == "P-16U6598210255521XMQKXDQI") {
+          planName = "Enterprise";
+        }
         if (user) {
-          await Subscription.create({
-            userId: user._id,
-            subscriptionStatus: data.status,
-            subscriptionId: data.id,
-            planId: data.plan_id,
-          });
+          try {
+            await Subscription.create({
+              userId: user._id,
+              subscriptionStatus: data.status,
+              subscriptionId: data.id,
+              planId: data.plan_id,
+              apiKey: apiKey,
+              planName: planName,
+            });
+          } catch (errror) {
+            console.log(errror);
+          }
         }
       }
       res.send("Subscription Created.");
@@ -321,6 +339,22 @@ const getSubscription = async (req, res) => {
     res.send("Not Available");
   }
 };
+const restApi = async (req, res) => {
+  const extractedURL = req.url;
+  const parsedUrl = new URL(extractedURL, "http://localhost"); // Provide a dummy hostname
+  const parsedQuery = new URLSearchParams(parsedUrl.search);
+  const apiKey = parsedQuery.get("api_key");
+  const IP = parsedQuery.get("ip");
+  const subscription = await Subscription.findOne({ apiKey: apiKey });
+  if (subscription) {
+    const IpInfo = await axios.get(
+      `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${IP}`
+    );
+    res.json(IpInfo.data);
+  } else {
+    res.json("Invalid Api KEY");
+  }
+};
 module.exports = {
   registerUser,
   loginUser,
@@ -335,4 +369,5 @@ module.exports = {
   forgotPassword,
   createSubscription,
   getSubscription,
+  restApi,
 };

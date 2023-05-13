@@ -13,6 +13,8 @@ const {
   forgotPassword,
   getSubscription,
   createSubscription,
+  genKey,
+  restApi,
 } = require("../controller/userController");
 const router = express.Router();
 router.post("/register", registerUser);
@@ -28,4 +30,5 @@ router.get("/searchUserIp/:ip", searchUserIp);
 router.get("/checkVpn/:ip", checkVpn);
 router.post("/createSubscription", createSubscription);
 router.get("/getSubscription", getSubscription);
+router.get("/restApi", restApi);
 module.exports = router;

@@ -28,13 +28,13 @@ const PayapalEnterprise = () => {
             alert(data.subscriptionID);
           },
         })
-        .render("#paypal-button-container-P-7CD25924B04716625MQJU2FA"); // Renders the PayPal button
+        .render("#paypal-button-container-P-16U6598210255521XMQKXDQI"); // Renders the PayPal button
     });
   }, []);
 
   return (
     <div>
-      <div id="paypal-button-container-P-7CD25924B04716625MQJU2FA"></div>
+      <div id="paypal-button-container-P-16U6598210255521XMQKXDQI"></div>
     </div>
   );
 };

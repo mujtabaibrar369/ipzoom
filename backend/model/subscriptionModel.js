@@ -21,6 +21,17 @@ const subscriptionSchema = mongoose.Schema({
     required: true,
     default: "null",
   },
+  planName: {
+    type: String,
+    required: true,
+    default: "Free",
+  },
+  apiKey: {
+    type: String,
+    required: true,
+    unique: true,
+    default: "null",
+  },
 });
 const Subscription = mongoose.model("Subscription", subscriptionSchema);
 module.exports = Subscription;

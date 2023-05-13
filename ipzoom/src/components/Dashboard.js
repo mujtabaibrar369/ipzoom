@@ -10,10 +10,11 @@ const Dashboard = () => {
   const [userFirstName, setUserFirstName] = useState("");
   const [userLastName, setUserLastName] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  const [apiKey, setApiKey] = useState("Not Available");
   const [subscriptionStatus, setSubscriptionStatus] =
     useState("Not Subscribed Yet");
   const [subscriptionID, setSubscriptionID] = useState("-");
-
+  const [subscriptionType, setSubscriptionType] = useState("Free");
   const token = localStorage.getItem("AccessToken");
   useEffect(() => {
     if (token) {
@@ -41,6 +42,8 @@ const Dashboard = () => {
           setUserEmail(userResponse.data.email);
           setSubscriptionStatus(subscriptionResponse.data.subscriptionStatus);
           setSubscriptionID(subscriptionResponse.data.subscriptionId);
+          setApiKey(subscriptionResponse.data.apiKey);
+          setSubscriptionType(subscriptionResponse.data.planName);
         } catch (error) {
           console.log("Error fetching user", error);
         }
@@ -91,9 +94,7 @@ const Dashboard = () => {
             <div className="key-div">
               <p className="key-text">Key</p>
               <div className="key-back">
-                <p className="key-value">
-                  563264a1-1768-4b38-83dd-13a5f3f8e966
-                </p>
+                <p className="key-value">{apiKey}</p>
               </div>
             </div>
             <div className="usage-div">
@@ -110,7 +111,7 @@ const Dashboard = () => {
             </div>
             <div className="current-subscription-div">
               <p className="current-text">Current Subscription</p>
-              <p className="subscription-value">Free</p>
+              <p className="subscription-value">{subscriptionType}</p>
             </div>
           </div>
         </div>
