@@ -11,6 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./components/Dashboard";
 import Subscribe from "./components/Subscribe";
+import APIDocs from "./components/APIDocs";
 function App() {
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/logout" element={<Home />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/subscribe" element={<Subscribe />}></Route>
+          <Route path="/apidocs" element={<APIDocs />}></Route>
         </Routes>
       </Router>
       <ToastContainer />

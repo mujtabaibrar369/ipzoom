@@ -49,7 +49,9 @@ const Header = (props) => {
         <div className="navbar-buttons">
           <Feature></Feature>
           <Pricing></Pricing>
-          <Docs></Docs>
+          <Link to="apidocs">
+            <Docs></Docs>
+          </Link>
           <Blog></Blog>
           <DashboardButton />
           {/* <PayPalProButton /> */}
@@ -68,7 +70,9 @@ const Header = (props) => {
         <div className="navbar-buttons">
           <Feature></Feature>
           <Pricing></Pricing>
-          <Docs></Docs>
+          <Link to="apidocs">
+            <Docs></Docs>
+          </Link>
           <Blog></Blog>
           <SignUp></SignUp>
           <Login></Login>
