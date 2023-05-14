@@ -1,0 +1,21 @@
+.pricingSloganDiv {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-align: left;
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 10px;
+  }
+  .pricingSloganHeading {
+    font-weight: bold;
+    font-size: 25px;
+    width: 810px;
+    line-height: 2.5rem;
+    letter-spacing: 0.2px;
+  }
+  .pricingSloganPara{
+    margin-top: 20px;
+    font-size: 19px;
+    width: 900px;
+    color: black;
+  }

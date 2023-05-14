@@ -94,7 +94,7 @@ const Dashboard = () => {
             <div className="key-div">
               <p className="key-text">Key</p>
               <div className="key-back">
-                <p className="key-value">{apiKey}</p>
+                <div className="key-value">{apiKey}</div>
               </div>
             </div>
             <div className="usage-div">

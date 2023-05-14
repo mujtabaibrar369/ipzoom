@@ -3,7 +3,7 @@ const Python = () => {
   return (
     <div className="pythonDiv">
       <button className="pythonButton" type="submit">
-        C#
+        Python
       </button>
     </div>
   );

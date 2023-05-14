@@ -1,16 +1,16 @@
-.javaDiv {
+.homeDiv {
     display: inline;
   }
-  .javaButton {
+  .homeButton {
     background-color: transparent;
     border: 0px;
-    color: black;
+    color: white;
     margin: 20px 60px 0px 0px;
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     cursor: pointer;
   }
-  .javaButton:hover{
+  .homeButton:hover{
     color: rgb(102, 250, 10);
   }

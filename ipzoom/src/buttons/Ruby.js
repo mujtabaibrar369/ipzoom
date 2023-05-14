@@ -1,9 +1,9 @@
 import "./Ruby.css";
 const Ruby = () => {
   return (
-    <div className="blogDiv">
-      <button className="blogButton" type="submit">
-        C#
+    <div className="rubyDiv">
+      <button className="rubyButton" type="submit">
+        Ruby
       </button>
     </div>
   );
