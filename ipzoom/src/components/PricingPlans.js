@@ -188,7 +188,7 @@ const PricingPlans = () => {
         <div className="plans">
           <div className="plan-div">
             <p className="free-text">Free</p>
-            <p className="plan-specs">100 requests/day</p>
+            <p className="plan-specs">100 requests</p>
             <p className="developerLicense">Developer License</p>
             <FreeSignUp />
           </div>
