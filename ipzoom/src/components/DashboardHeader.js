@@ -1,9 +1,9 @@
 import "./DashboardHeader.css";
 import Logo from "./logo.png";
 import { Link } from "react-router-dom";
-import DashboardButton from "../buttons/DashboardButton";
 import Logout from "../buttons/Logout";
 import ApiDocs from "../buttons/ApiDocs";
+import HomeButton from "../buttons/HomeButton";
 const DashboardHeader = (props) => {
   return (
     <div className="dashboard-navbar">
@@ -13,7 +13,9 @@ const DashboardHeader = (props) => {
         </Link>
       </div>
       <div className="dashboard-navbar-buttons">
-        <DashboardButton></DashboardButton>
+        <Link to="/">
+          <HomeButton />
+        </Link>
         <ApiDocs></ApiDocs>
         <Logout></Logout>
       </div>

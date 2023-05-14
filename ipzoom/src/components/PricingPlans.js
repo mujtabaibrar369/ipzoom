@@ -76,6 +76,8 @@ import React, { useEffect, useState } from "react";
 // };
 // export default PricingPlans;
 import axios from "axios";
+import Footer from "./Footer";
+import PricingSlogan from "./PricingSlogan";
 import { toast } from "react-toastify";
 
 const PricingPlans = () => {
@@ -148,25 +150,38 @@ const PricingPlans = () => {
   }, []);
   if (Logged) {
     return (
-      <div>
-        <div className="pricing-div">
-          <Header />
+      <div className="pricing-div">
+        <Header />
+        <div className="pricingSloganMain">
+          <PricingSlogan />
         </div>
-        <div className="column">
-          <p className="free-text">Professional</p>
-          <p className="plan-specs">10,000 requests</p>
-          <p className="plan-specs">Production License</p>
-          <p className="ssl-text">SSL Included</p>
-          <div id="paypal-button-container-P-7CD25924B04716625MQJU2FA"></div>
+        <div className="plans">
+          <div className="plan-div">
+            <p className="free-text">Free</p>
+            <p className="plan-specs">100 requests</p>
+            <p className="developerLicense">Developer License</p>
+            <p className="alreadyText">Already Signed to Free Plan</p>
+            <p className="upgradeText">
+              Upgrade to <b>Professional</b> or <b>Enterprise</b> Plan according
+              to your need
+            </p>
+          </div>
+          <div className="plan-div">
+            <p className="free-text">Professional</p>
+            <p className="plan-specs">10,000 requests/month</p>
+            <p className="plan-specs">Production License</p>
+            <p className="price-text">$10</p>
+            <div id="paypal-button-container-P-7CD25924B04716625MQJU2FA"></div>
+          </div>
+          <div className="plan-div">
+            <p className="free-text">Enterprise</p>
+            <p className="plan-specs">Unlimited requests/month</p>
+            <p className="plan-specs">Production License</p>
+            <p className="price-text">$100</p>
+            <div id="paypal-button-container-P-16U6598210255521XMQKXDQI"></div>
+          </div>
         </div>
-
-        <div className="column">
-          <p className="free-text">Enterprise</p>
-          <p className="plan-specs">Unlimited number of requests</p>
-          <p className="plan-specs">Production License</p>
-          <p className="ssl-text">SSL Included</p>
-          <div id="paypal-button-container-P-16U6598210255521XMQKXDQI"></div>
-        </div>
+        <Footer />
       </div>
     );
   } else {
@@ -176,22 +191,22 @@ const PricingPlans = () => {
         <div className="plans">
           <div className="plan-div">
             <p className="free-text">Free</p>
-            <p className="plan-specs">100 requests/day</p>
+            <p className="plan-specs">100 requests</p>
             <p className="developerLicense">Developer License</p>
             <FreeSignUp />
           </div>
           <div className="plan-div">
             <p className="free-text">Professional</p>
-            <p className="plan-specs">10,000 requests/day</p>
+            <p className="plan-specs">10,000 requests/month</p>
             <p className="plan-specs">Production License</p>
-            <p className="ssl-text">SSL Included</p>
+            <p className="price-text">$10</p>
             <FreeSignUp />
           </div>
           <div className="plan-div">
             <p className="free-text">Enterprise</p>
-            <p className="plan-specs">100,000 requests/day</p>
+            <p className="plan-specs">Unlimited requests/month</p>
             <p className="plan-specs">Production License</p>
-            <p className="ssl-text">SSL Included</p>
+            <p className="price-text">$100</p>
             <FreeSignUp />
           </div>
         </div>

@@ -3,7 +3,7 @@ const JavaScript = () => {
   return (
     <div className="javascriptDiv">
       <button className="javascriptButton" type="submit">
-        C#
+        Javascript
       </button>
     </div>
   );

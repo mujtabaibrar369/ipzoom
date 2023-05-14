@@ -3,7 +3,7 @@ const Php = () => {
   return (
     <div className="phpDiv">
       <button className="phpButton" type="submit">
-        C#
+        Php
       </button>
     </div>
   );
