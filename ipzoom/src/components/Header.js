@@ -49,12 +49,9 @@ const Header = (props) => {
         <div className="navbar-buttons">
           <Feature></Feature>
           <Pricing></Pricing>
-          <Link to="apidocs">
-            <Docs></Docs>
-          </Link>
+          <Docs></Docs>
           <Blog></Blog>
           <DashboardButton />
-          {/* <PayPalProButton /> */}
           <Logout />
         </div>
       </div>
@@ -64,15 +61,18 @@ const Header = (props) => {
       <div className="navbarDiv">
         <div className="header">
           <Link to="/">
-            <img className="logo" src={Logo} alt="Main-Logo" title="Go to Home" />
+            <img
+              className="logo"
+              src={Logo}
+              alt="Main-Logo"
+              title="Go to Home"
+            />
           </Link>
         </div>
         <div className="navbar-buttons">
           <Feature></Feature>
           <Pricing></Pricing>
-          <Link to="apidocs">
-            <Docs></Docs>
-          </Link>
+          <Docs></Docs>
           <Blog></Blog>
           <SignUp></SignUp>
           <Login></Login>

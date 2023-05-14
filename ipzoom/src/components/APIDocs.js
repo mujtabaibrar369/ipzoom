@@ -9,6 +9,9 @@ import "./APIDocs.css";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 const APIDocs = () => {
+  const testHandler = () => {
+    console.log("test");
+  };
   return (
     <div className="apiDocsMain">
       <div className="apiHeader">
@@ -16,23 +19,25 @@ const APIDocs = () => {
       </div>
       <div className="docsContain">
         <div className="headingDocs">
-            <h3 className="apiDocument">API Documentation in your language of choice.</h3>
-            <p className="apiDocPara">Access all the information you need to build on our API. 
-                Our API is predictable, resource-oriented URLs, and uses HTTP 
-                response codes to indicate API errors.</p>
+          <h3 className="apiDocument">
+            API Documentation in your language of choice.
+          </h3>
+          <p className="apiDocPara">
+            Access all the information you need to build on our API. Our API is
+            predictable, resource-oriented URLs, and uses HTTP response codes to
+            indicate API errors.
+          </p>
         </div>
         <div>
-            <Csharp />
-            <Python />
-            <Java />
-            <JavaScript />
-            <Php />
-            <Ruby />
-            <Node />
+          <Csharp onClick={testHandler} />
+          <Python />
+          <Java />
+          <JavaScript />
+          <Php />
+          <Ruby />
+          <Node />
         </div>
-        <div>
-            
-        </div>
+        <div></div>
       </div>
     </div>
   );

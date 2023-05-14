@@ -75,7 +75,6 @@ import React, { useEffect, useState } from "react";
 //   }
 // };
 // export default PricingPlans;
-import React, { useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 

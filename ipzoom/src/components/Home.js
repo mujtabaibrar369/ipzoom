@@ -6,6 +6,7 @@ import IpInfo from "./IpInfo";
 import FeatureHeading from "./FeatureHeading";
 import Motive from "./Motive";
 import Footer from "./Footer";
+import GoogleMaps from "./GoogleMap";
 import "./Home.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -21,6 +22,7 @@ function Home() {
       </div>
       <IpInfoBack></IpInfoBack>
       <IpInfo></IpInfo>
+      <div></div>
       <FeatureHeading></FeatureHeading>
       <Motive></Motive>
       <Footer></Footer>
