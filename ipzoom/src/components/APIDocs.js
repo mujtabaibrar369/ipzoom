@@ -29,7 +29,7 @@ const APIDocs = () => {
           </p>
         </div>
         <div>
-          <Csharp onClick={testHandler} />
+          <Csharp />
           <Python />
           <Java />
           <JavaScript />
@@ -37,7 +37,7 @@ const APIDocs = () => {
           <Ruby />
           <Node />
         </div>
-        <div></div>
+        <div id="test"></div>
       </div>
     </div>
   );

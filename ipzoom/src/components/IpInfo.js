@@ -6,9 +6,9 @@ import search from "./search.png";
 import "./IpInfo.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 // import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GoogleMap from "./GoogleMap";
 const IpInfo = () => {
   const [ip, setIp] = useState("");
   const [city, setCity] = useState("");
@@ -126,6 +126,9 @@ const IpInfo = () => {
           <br></br>
           {vpnDetection}
         </p>
+      </div>
+      <div className="gmaps">
+        <GoogleMap longitude={longitude} latitude={latitude} />
       </div>
       <div className="search_ip_buttons">
         <YourIpAddress></YourIpAddress>

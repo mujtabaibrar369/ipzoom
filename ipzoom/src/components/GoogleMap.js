@@ -1,27 +1,16 @@
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import React, { useEffect } from "react";
 
-const GoogleMaps = () => {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBZu9PNPkhIFPoxzzsfoXEkPgZe9GBAhTI",
+function GoogleMap(props) {
+  useEffect(() => {
+    const ifameData = document.getElementById("iframeId");
+    const lat = props.latitude;
+    const lon = props.longitude;
+    ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
   });
-  const center = useMemo(() => ({ lat: 18.52043, lng: 73.856743 }), []);
-
   return (
-    <div className="App">
-      {!isLoaded ? (
-        <h1>Loading...</h1>
-      ) : (
-        <GoogleMap
-          mapContainerClassName="map-container"
-          center={center}
-          zoom={10}
-        >
-          <Marker position={{ lat: 18.52043, lng: 73.856743 }} />
-        </GoogleMap>
-      )}
+    <div>
+      <iframe id="iframeId" height="300px" width="30%"></iframe>
     </div>
   );
-};
-
-export default GoogleMaps;
+}
+export default GoogleMap;
